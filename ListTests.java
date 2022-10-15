@@ -1,15 +1,30 @@
-import static org.junit.Assert.*;
 import org.junit.*;
+import java.util.ArrayList;
+import static org.junit.Assert.*;
 
-public class ArrayTests{
+class equalChecker implements StringChecker{
+    @Override
+    public boolean checkString(String s){
+        return s.length() == 5;
+    }
+}
 
+
+public class ListTests{
     @Test
     public void testFilter(){
-        List<String> toTest = new ArrayList();
-        StringChecker sc = new StringChecker();
-        
+        ArrayList<String> toTest = new ArrayList<>();
+        ArrayList<String> result = new ArrayList<>();
+        StringChecker sc = new equalChecker();
+        String toCheck = "apple";
+        toTest.add("apple");
+        toTest.add("pineapples");
+        toTest.add("pears");
+        result.add("apples");
+        result.add("pears");
+        assertEquals(true, result.equals(ListExamples.filter(toTest, sc)));      
     }
 
 
-
+    
 }

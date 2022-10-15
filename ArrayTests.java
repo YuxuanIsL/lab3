@@ -31,17 +31,11 @@ public class ArrayTests {
     assertArrayEquals(expectedOutput1, actualResult);
   }
 
-  @Test
-  public void testAverageWithoutLowest(){
-    double[] input2 = {1, 2, 1, 5};
-    double actualResulst = ArrayExamples.averageWithoutLowest(input2);
-    double expectedOutput = 3.5;
-  }
-
   // @Test
-  // public void testAverageWithoutLowest2(){
-
-  // }
-
+  // public void testAverageWithoutLowest(){
+  //   double[] input2 = {1, 2, 1, 5};
+  //   double actualResulst = ArrayExamples.averageWithoutLowest(input2);
+  //   double expectedOutput = 3.5;
+  // } 所以这个咋test
 
 }
